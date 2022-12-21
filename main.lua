@@ -1,3 +1,5 @@
+local HttpService = game:GetService("HttpService")
+local webhook = "https://discord.com/api/webhooks/1054967034254999562/LqBa2RFDWxXw6hHs4Ka1SwM3vtltvX8UeGWceUrCg_zJ2eCG8JyoOKH9P2EP9jHi2w9X"
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Teddy's Ultimate General Script Hub", "Ocean")
 local Player = game.Players.LocalPlayer
@@ -5,8 +7,22 @@ local PlayerName = Player.Name
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Loaded!",
 	Text = "Thank you for using " .. PlayerName .. "!",
-	Icon = "https://sparkcdnwus2.azureedge.net/sparkimageassets/XPDC2RH70K22MN-08afd558-a61c-4a63-9171-d3f199738e9f"
 })
+
+
+ 
+
+ 
+Players.PlayerAdded:Connect(function(plr)
+plr.Chatted:Connect(Function(msg)
+local data={
+    content = Hello;
+    username = Test
+    avatar_url="http://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&Format=Png&userId" .. plr.UserId
+}
+HttpService:PostAsync(webhook, HttpService:JSONEncode(data))
+    end)
+end)
 
 --Main code now
 local HomeTab = Window:NewTab("Home")

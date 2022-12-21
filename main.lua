@@ -25,7 +25,7 @@ local AssassinSec = Tab1:NewSection("Assassin")
 local OthersSec = OthersTab:NewSection("General Others")
 local SpeedSec = OthersTab:NewSection("Speed")
 local TPSec = TPPlayer:NewSection("Player TP")
-local pinput = ""
+local ArcadeXSec = Tab1:NewSection("Arcade Island X")
 
 DiscordSec:NewButton("Copy Discord Link", "Copies the discord server link to your clipboard", function()
 	setclipboard("https://discord.gg/A5TrBCXsav")
@@ -71,4 +71,9 @@ TPSec:NewTextBox("Player", "Insert the player's name", function(txt)
 	Title = "Teleported!",
 	Text = "",
 })
+end)
+ArcadeXSec:NewToggle("Coin Auto Farm", "Auto collects coins", function(state)
+    if state then
+		game.Workspace.PlayerName.HumanoidRootPart.CFrame = game.Workspace.Chips.Chip
+		sleep(1)
 end)

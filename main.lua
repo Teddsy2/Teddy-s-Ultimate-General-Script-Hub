@@ -66,7 +66,7 @@ SpeedSec:NewSlider("Speed", "Set your walkspeed", 500, 0, function(s)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 TPSec:NewTextBox("Player", "Insert the player's name", function(txt)
-	game.Workspace.poopsuc261.HumanoidRootPart.CFrame = game.Workspace:WaitForChild(txt, 10000).HumanoidRootPart.CFrame
+	game.Workspace.PlayerName.HumanoidRootPart.CFrame = game.Workspace:WaitForChild(txt, 10000).HumanoidRootPart.CFrame
 	game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Teleported!",
 	Text = "",

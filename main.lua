@@ -4,7 +4,7 @@ local Player = game.Players.LocalPlayer
 local PlayerName = Player.Name
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Loaded!",
-	Text = "Thank you for using " .. PlayerName .. "!",
+	Text = "Thank you for using this script " .. PlayerName .. "!",
 })
 
 --Main code now

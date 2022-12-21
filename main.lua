@@ -74,8 +74,7 @@ TPSec:NewTextBox("Player", "Insert the player's name", function(txt)
 end)
 ArcadeXSec:NewToggle("Coin Auto Farm", "Auto collects coins", function(state)
     if state then
-		game.Workspace.PlayerName.HumanoidRootPart.CFrame = game.Workspace.Chips.Chip
-		sleep(1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Chips.Chip.CFrame
 	else
 		print("a")
 	end
